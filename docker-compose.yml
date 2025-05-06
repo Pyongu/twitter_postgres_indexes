@@ -5,22 +5,22 @@ services:
     build: services/pg_denormalized
     volumes:
       - ./:/tmp/db
-      - $HOME/bigdata/pg_denormalized:/var/lib/postgresql/data
+      - $HOME/bigdata/pg_denormalized2:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pass
       - PGUSER=postgres
     ports:
-      - 4444:5432
+      - 4242:5432
 
   pg_normalized_batch:
     build: services/pg_normalized_batch
     volumes:
       - ./:/tmp/db
-      - $HOME/bigdata/pg_normalized_batch:/var/lib/postgresql/data
+      - $HOME/bigdata/pg_normalized_batch2:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pass
       - PGUSER=postgres
     ports:
-      - 4445:5432
+      - 4343:5432

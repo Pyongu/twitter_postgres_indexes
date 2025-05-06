@@ -26,4 +26,4 @@ time echo "$files" | parallel ./load_denormalized.sh
 echo '================================================================================'
 echo 'load pg_normalized_batch'
 echo '================================================================================'
-time echo "$files" | parallel python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:4445/ --inputs {}
+time echo "$files" | parallel python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:4343/ --inputs {}
